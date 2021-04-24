@@ -22,7 +22,7 @@ public class StudentController {
     }
 
     @PostMapping("/addStudent")
-    public Student addStudent(@RequestBody String name, String surname, String classroom) {
+    public Student addStudent(String name, String surname, String classroom) {
         return studentService.addStudent(name, surname, classroom);
     }
 
