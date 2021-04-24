@@ -24,7 +24,7 @@ public class StudentService {
     }
 
     public Student getStudent(Long id) {
-        return studentRepository.findOne(id);
+        return studentRepository.findById(id);
     }
 
     public void updateStudentName(Long id, String name) {

@@ -1,7 +1,6 @@
 package com.example.studentService.repository;
 
 import com.example.studentService.model.Student;
-import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -17,4 +16,6 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
     @Modifying
     @Query("update Student s set s.name = :name where s.id = :id")
     void updateStudentNameById(@Param(value ="id") long id, @Param(value ="name")String name);
+
+    Student findById(long id);
 }
