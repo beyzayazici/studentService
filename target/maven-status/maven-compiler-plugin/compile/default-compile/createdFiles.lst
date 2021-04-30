@@ -1,0 +1,8 @@
+com/example/studentService/repository/StudentRepository.class
+com/example/studentService/controller/StarController.class
+com/example/studentService/model/Student.class
+com/example/studentService/configuration/SwaggerConfig.class
+com/example/studentService/controller/StudentController.class
+com/example/studentService/service/StudentService.class
+com/example/studentService/StudentServiceApplication.class
+com/example/studentService/service/StarService.class

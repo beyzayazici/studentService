@@ -27,19 +27,51 @@ public class StudentService {
         return studentRepository.findById(id);
     }
 
-    public void updateStudentName(Long id, String name) {
-        studentRepository.updateStudentNameById(id, name);
-    }
-
-    public void updateStudent(Long id, Student student) {
+    public String updateStudentName(Long id, String name) {
         Student newStudent = studentRepository.findOne(id);
-        newStudent.setName(student.getName());
-        newStudent.setSurname(student.getSurname());
-        newStudent.setClassroom(student.getClassroom());
-        studentRepository.save(newStudent);
+        var result = new StringBuilder();
+        result.append(id).append(" numaralı öğrenci ");
+        try {
+            if(newStudent != null) {
+                studentRepository.updateStudentNameById(id, name);
+                return result.append("başarıyla güncellendi.").toString();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return result.append("bulunamadı.Güncelleme işlemi yapılamadı").toString();
     }
 
-    public void deleteStudent(Long id) {
-        studentRepository.delete(id);
+    public String updateStudent(Long id, Student student) {
+        Student newStudent = studentRepository.findOne(id);
+        var result = new StringBuilder();
+        result.append(id).append(" numaralı öğrenci ");
+        try {
+            if(newStudent != null) {
+                newStudent.setName(student.getName());
+                newStudent.setSurname(student.getSurname());
+                newStudent.setClassroom(student.getClassroom());
+                studentRepository.save(newStudent);
+                return result.append("başarıyla güncellendi.").toString();
+            }
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return result.append("bulunamadı.Güncelleme işlemi yapılamadı.").toString();
+    }
+
+    public String deleteStudent(Long id) {
+        Student newStudent = studentRepository.findOne(id);
+        var result = new StringBuilder();
+        result.append(id).append(" numaralı öğrenci ");
+        try {
+            if(newStudent != null) {
+                studentRepository.delete(id);
+                return result.append("silindi.").toString();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return result.append("bulunamadı.Silme işlemi yapılamadı.").toString();
     }
 }

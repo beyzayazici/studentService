@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="935ac612-9949-42c1-8089-d3a4f99377c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/studentService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/studentService.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentService/controller/StarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/studentService/controller/StarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentService/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/studentService/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/studentService/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/studentService/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentService/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/studentService/service/StudentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,23 +62,14 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn dependency:analyze-only" />
+      <command value="mvn verify" />
+      <command value="mvn clean" />
+      <command value="mvn dependency:analyze" />
       <command value="mvn clean install" />
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StudentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="studentService" />
       <extension name="coverage">
@@ -113,7 +106,9 @@
       <workItem from="1619250351396" duration="2055000" />
       <workItem from="1619252644329" duration="2162000" />
       <workItem from="1619255871016" duration="1099000" />
-      <workItem from="1619263629958" duration="5930000" />
+      <workItem from="1619263629958" duration="6080000" />
+      <workItem from="1619279455523" duration="2909000" />
+      <workItem from="1619810303484" duration="2235000" />
     </task>
     <servers />
   </component>
@@ -127,6 +122,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/studentService/controller/StudentController.java</url>
           <line>35</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/studentService/service/StudentService.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

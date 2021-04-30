@@ -32,17 +32,17 @@ public class StudentController {
     }
 
     @PutMapping("/updateStudentName/{id}")
-    public void updateStudentName(@RequestBody String name, @PathVariable Long id) {
-        studentService.updateStudentName(id, name);
+    public String updateStudentName(@RequestBody String name, @PathVariable Long id) {
+        return studentService.updateStudentName(id, name);
     }
 
     @PutMapping("/updateStudent/{id}")
-    public void updateStudent(@RequestBody Student student, @PathVariable Long id) {
-        studentService.updateStudent(id, student);
+    public String updateStudent(@RequestBody Student student, @PathVariable Long id) {
+        return studentService.updateStudent(id, student);
     }
 
     @DeleteMapping("/deleteStudentById/{id}")
-    public void deleteStudent(@PathVariable Long id) {
-        studentService.deleteStudent(id);
+    public String deleteStudent(@PathVariable Long id) {
+        return studentService.deleteStudent(id);
     }
 }
